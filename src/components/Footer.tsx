@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer(){
     return (
         <>
@@ -14,10 +16,17 @@ export default function Footer(){
             <div>
                 <h4>Navbar</h4>
                 <ul>
-                    <li>Home</li>
-                    <li>Shop</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                <li>   
+                <Link href="/">Home</Link>
+                </li>
+                <Link href="/shop">Shop</Link>
+                <li>
+                <Link href="/about">About</Link>
+                </li>
+                <li>
+                <Link href="/contact">Contact</Link>
+                </li>
+                  
                 </ul>
             </div>
 

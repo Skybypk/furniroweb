@@ -7,32 +7,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .navbar .head {
   display: flex;
-  /* justify-content: space-between;
-  align-items: center; */
   gap: 2rem;
 }
 
 .navbar .icons {
   display: flex;
-  /* justify-content: space-between;
-  align-items: center; */
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar .head,
+  .navbar .icons {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 /* ---------------------- HERO SECTION ----------------------------------- */
 .heroImage {
-  /* width: 50rem;
-  height: 63rem; */
+  /* Default styles */
 }
 
 .heroText {
   width: 34rem;
-  /* height: 16rem; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -57,21 +64,50 @@
 
 .heroText .buyBtn {
   background-color: #b88e2f;
-  padding: 0.5rem 3rem 0.5rem 3rem;
+  padding: 0.5rem 3rem;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .heroImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .heroText {
+    width: 90%;
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .heroText h3 {
+    font-size: 1.5rem;
+  }
+
+  .heroText .buyBtn {
+    padding: 0.5rem 2rem;
+  }
 }
 
 /* ---------------------------- SUB TEXT ---------------------------- */
 .subText {
   text-align: center;
 }
+
 .subText h3 {
   color: #292826;
   font-weight: bold;
   font-size: 2rem;
 }
 
-.imgArea{ 
+@media (max-width: 768px) {
+  .subText h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.imgArea {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,84 +115,76 @@
   margin-top: 1rem;
 
 }
-.imgArea h6{
+
+.imgArea h6 {
   text-align: center;
   font-weight: bold;
 }
 
-/* -------------------cardsss -------------------------------- */
-
-.cardsContainer{
-  
-    display: grid;
-    /* grid-template-columns: ; */
-    grid-template-columns:  repeat(4, 1fr);    
-    gap: 0.1rem; 
-    padding: 20px; 
-    justify-items: center;
-
-    /* display: flex; */
+@media (max-width: 768px) {
+  .imgArea {
+    flex-direction: column;
+  }
 }
 
+/* ------------------- CARDS SECTION -------------------------------- */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.1rem;
+  padding: 20px;
+  justify-items: center;
+}
 
-.productBtn{
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cardsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.productBtn {
   align-self: center;
 }
 
-.slideSection{
+.slideSection {
   display: grid;
-  /* grid-template-columns: ; */
-  grid-template-columns:  repeat(3, 1fr);    
-  /* gap: 0;  */
-  padding: 2rem; 
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem;
   justify-items: center;
   /* align-items: center; */
 }
 
-
-/* ------------------------------ SHOP Routing------------------------------------------- */
-
-
-.shopsect h3, .shopPara{
+/* ------------------------------ SHOP ROUTING ------------------------------------------- */
+.shopsect h3, .shopPara {
   position: absolute;
   top: 30%;
   left: 50%;
 }
-.shopsect .shopPara{
-  position: absolute;
-  top: 35%;
-  left: 50%;
+
+@media (max-width: 768px) {
+  .shopsect h3,
+  .shopPara {
+    top: 20%;
+    transform: translate(-50%, -20%);
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer{
+/* ------------------------------ FOOTER ------------------------------------------- */
+.footer {
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
   gap: 1rem;
 }
 
-.footer input{
-  /* border: none; */
+.footer input {
   outline: none;
-
 }
-
 
 footer hr {
   margin: auto;
@@ -164,9 +192,29 @@ footer hr {
   width: 1000px;
 }
 
-footer .para p{
+footer .para p {
   font-weight: 400;
   position: absolute;
   left: 13%;
   padding: 2rem 0rem;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer hr {
+    width: 90%;
+  }
+
+  footer .para p {
+    position: static;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+ 
+
+ 
